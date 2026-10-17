@@ -1,0 +1,33 @@
+.rk-add{display:flex;gap:10px;flex:1;min-width:260px}
+.rk-add.big{width:min(520px,100%);margin-top:12px;flex:none}
+.rk-add input,.rk-search{flex:1;min-width:0;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:12px;font:inherit;font-size:14px;color:var(--text);outline:0}
+.rk-add input:focus,.rk-search:focus{border-color:var(--accent)}
+.rk-add .primary{padding:10px 22px}
+.rk-add .primary:disabled{opacity:.6;cursor:not-allowed}
+.rk-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.rk-search{flex:0 1 240px}
+.ghost:disabled{opacity:.6;cursor:progress}
+
+.rk-chart svg{width:100%;height:auto;display:block}
+.rk-chart .grid{stroke:var(--border);stroke-width:1}
+.rk-chart .axis{fill:var(--muted);font-size:12px}
+.rk-chart .line{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.rk-chart .dot{fill:var(--surface);stroke:var(--accent);stroke-width:2.5}
+
+.rk-table{width:100%;border-collapse:collapse;font-size:14px}
+.rk-table th{text-align:left;font-weight:500;color:var(--muted);padding:0 12px 12px 0;white-space:nowrap}
+.rk-table th button{font:inherit;color:inherit}
+.rk-table th button:hover{color:var(--text)}
+.rk-table td{padding:14px 12px 14px 0;border-top:1px solid var(--border);vertical-align:middle}
+.rk-table tbody tr{cursor:pointer;transition:background .12s}
+.rk-table tbody tr:hover,.rk-table tbody tr.sel{background:var(--hover)}
+.rk-term{font-weight:600}
+.rk-up{color:var(--good)}.rk-down{color:var(--bad)}
+.rk-dash{color:var(--muted)}
+.spark path{stroke:var(--muted)}
+.spark.up path{stroke:var(--good)}
+.spark.down path{stroke:var(--bad)}
+.rk-x{width:30px;height:30px;border-radius:8px;color:var(--muted);font-size:12px}
+.rk-x:hover{background:var(--surface);color:var(--bad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:720px){.rk-search{flex-basis:100%}}

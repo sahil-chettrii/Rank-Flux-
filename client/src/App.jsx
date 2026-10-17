@@ -10,6 +10,7 @@ import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Overview from "./pages/Overview";
 import FeaturePage from "./pages/FeaturePage";
 import SiteAudit from "./pages/SiteAudit";
+import RankTracker from "./pages/RankTracker";
 import { Login, Signup } from "./pages/Auth";
 import { ProtectedRoute, GuestRoute } from "./components/ProtectedRoute";
 
@@ -52,7 +53,8 @@ export default function App() {
         <Route index element={<Navigate to="overview" replace />} />
         <Route path="overview" element={<Overview />} />
         <Route path="audit" element={<SiteAudit />} />
-        {NAV.filter((n) => !["overview", "audit"].includes(n.path)).map((n) => (
+        <Route path="rank-tracker" element={<RankTracker />} />
+        {NAV.filter((n) => !["overview", "audit", "rank-tracker"].includes(n.path)).map((n) => (
           <Route key={n.path} path={n.path} element={<FeaturePage item={n} />} />
         ))}
       </Route>
