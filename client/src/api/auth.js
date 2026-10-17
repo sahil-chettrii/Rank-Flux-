@@ -30,3 +30,12 @@ export function saveSession({ token, user }) {
   localStorage.setItem("rf-token", token);
   localStorage.setItem("rf-user", JSON.stringify(user));
 }
+
+export function getUser() {
+  try { return JSON.parse(localStorage.getItem("rf-user")); } catch { return null; }
+}
+export const isLoggedIn = () => !!localStorage.getItem("rf-token");
+export function clearSession() {
+  localStorage.removeItem("rf-token");
+  localStorage.removeItem("rf-user");
+}

@@ -58,3 +58,13 @@
   .topbar,.dash-content{padding-left:18px;padding-right:18px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* user menu */
+.user-menu{position:relative}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:14px;font-weight:600;display:grid;place-items:center}
+.user-pop{position:absolute;right:0;top:calc(100% + 8px);width:230px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 24px 60px -20px rgba(0,0,0,.5)}
+.user-info{display:grid;gap:2px;padding:10px;border-bottom:1px solid var(--border);margin-bottom:6px;overflow:hidden}
+.user-info strong{font-size:14px}
+.user-info span{font-size:13px;color:var(--muted);text-overflow:ellipsis;overflow:hidden}
+.user-pop>button{display:block;width:100%;text-align:left;padding:10px;border-radius:8px;font-size:14px}
+.user-pop>button:hover{background:var(--hover)}

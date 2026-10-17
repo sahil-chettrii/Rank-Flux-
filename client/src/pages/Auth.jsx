@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { login, signup, saveSession } from "../api/auth";
 import "../style/Auth.css";
 
@@ -31,6 +31,7 @@ function PasswordInput({ value, onChange, autoComplete, placeholder }) {
 function AuthPage({ mode }) {
   const isSignup = mode === "signup";
   const navigate = useNavigate();
+  const location = useLocation();
   const [form, setForm] = useState({ name: "", email: "", password: "", terms: false });
   const [errors, setErrors] = useState({});
   const [serverError, setServerError] = useState("");
@@ -62,7 +63,7 @@ function AuthPage({ mode }) {
       const email = form.email.trim().toLowerCase();
       const data = isSignup ? await signup(form.name.trim(), email, form.password) : await login(email, form.password);
       saveSession(data);
-      navigate("/app");
+      navigate(location.state?.from || "/app", { replace: true });
     } catch (err) {
       setServerError(err.message);
     } finally {

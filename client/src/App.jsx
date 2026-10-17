@@ -10,6 +10,7 @@ import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Overview from "./pages/Overview";
 import FeaturePage from "./pages/FeaturePage";
 import { Login, Signup } from "./pages/Auth";
+import { ProtectedRoute, GuestRoute } from "./components/ProtectedRoute";
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -40,9 +41,13 @@ export default function App() {
           <Footer />
         )}
       />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/app" element={<DashboardLayout theme={theme} onToggleTheme={toggleTheme} />}>
+      <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
+      <Route path="/signup" element={<GuestRoute><Signup /></GuestRoute>} />
+      <Route path="/app" element={
+          <ProtectedRoute>
+            <DashboardLayout theme={theme} onToggleTheme={toggleTheme} />
+          </ProtectedRoute>
+        }>
         <Route index element={<Navigate to="overview" replace />} />
         <Route path="overview" element={<Overview />} />
         {NAV.filter((n) => n.path !== "overview").map((n) => (
