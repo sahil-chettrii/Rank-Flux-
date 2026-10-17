@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Overview from "./pages/Overview";
 import FeaturePage from "./pages/FeaturePage";
+import SiteAudit from "./pages/SiteAudit";
 import { Login, Signup } from "./pages/Auth";
 import { ProtectedRoute, GuestRoute } from "./components/ProtectedRoute";
 
@@ -50,7 +51,8 @@ export default function App() {
         }>
         <Route index element={<Navigate to="overview" replace />} />
         <Route path="overview" element={<Overview />} />
-        {NAV.filter((n) => n.path !== "overview").map((n) => (
+        <Route path="audit" element={<SiteAudit />} />
+        {NAV.filter((n) => !["overview", "audit"].includes(n.path)).map((n) => (
           <Route key={n.path} path={n.path} element={<FeaturePage item={n} />} />
         ))}
       </Route>

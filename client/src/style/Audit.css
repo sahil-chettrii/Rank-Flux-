@@ -1,0 +1,39 @@
+.au-center{display:grid;place-items:center;padding:80px 0}
+.spinner.sm{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite}
+.au-progress{display:grid;gap:14px;max-width:640px}
+.au-progress h2{margin:0}
+.au-progress p{color:var(--text);font-size:15px}
+.au-progress small{color:var(--muted);font-size:13px}
+
+.c-good{color:var(--good)}.c-ok{color:var(--ok)}.c-bad{color:var(--bad)}
+
+.au-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.au-right{display:flex;gap:10px;flex-wrap:wrap}
+.au-right select,.au-right input{padding:9px 12px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font:inherit;font-size:14px;color:var(--text);outline:0}
+.au-right input{width:200px}
+.au-right select:focus,.au-right input:focus{border-color:var(--accent)}
+
+.au-list{list-style:none;padding:0;margin-top:6px}
+.au-list>li{border-top:1px solid var(--border)}
+.au-list>li.dim .au-title{opacity:.55}
+.au-row{display:flex;align-items:center;gap:12px;padding:14px 0}
+.au-main{flex:1;min-width:0;display:flex;align-items:center;gap:16px;text-align:left}
+.au-title{display:grid;gap:3px;min-width:0}
+.au-title strong{font-size:15px;font-weight:600}
+.au-title small{font-size:13px;color:var(--muted)}
+.au-actions{display:flex;align-items:center;gap:6px;flex:none}
+.au-actions button{padding:7px 12px;border:1px solid var(--border);border-radius:999px;font-size:13px;white-space:nowrap}
+.au-actions button:hover{background:var(--hover)}
+.au-tag{font-size:12px;color:var(--muted);text-transform:capitalize;padding-right:4px}
+.au-detail{padding:0 0 18px 92px;font-size:14px;line-height:1.6;color:var(--muted)}
+.au-detail ul{list-style:none;padding:0;margin-top:10px;display:grid;gap:4px}
+.au-detail a{color:var(--accent);word-break:break-all}
+.au-detail a:hover{text-decoration:underline}
+.server-err{padding:12px 14px;border:1px solid rgba(239,68,68,.4);background:rgba(239,68,68,.1);border-radius:12px;font-size:14px;color:#ef4444}
+
+@media (max-width:720px){
+  .au-row{flex-direction:column;align-items:flex-start}
+  .au-actions{padding-left:2px}
+  .au-detail{padding-left:0}
+  .au-right input{width:100%}
+}
