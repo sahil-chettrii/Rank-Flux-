@@ -1,0 +1,13 @@
+:root{
+  --bg:#07080c; --surface:#10121a; --border:#1f2330; --text:#f4f6fb; --muted:#8b93a7;
+  --accent:#2f6bff; --accent2:#7c5cff; --btn-bg:#fff; --btn-text:#0a0b10; --hover:#171a25; --glass:rgba(7,8,12,.75);
+}
+[data-theme="light"]{
+  --bg:#f7f8fb; --surface:#fff; --border:#e3e6ee; --text:#0b0d14; --muted:#5d6577;
+  --btn-bg:#0b0d14; --btn-text:#fff; --hover:#eef0f6; --glass:rgba(247,248,251,.85);
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}

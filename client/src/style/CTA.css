@@ -1,0 +1,13 @@
+.cta-section{padding:40px 24px 110px}
+.cta-card{position:relative;overflow:hidden;max-width:1100px;margin:0 auto;padding:84px 32px;text-align:center;border:1px solid var(--border);border-radius:32px;
+  background:radial-gradient(ellipse 70% 90% at 50% 120%,rgba(47,107,255,.45),transparent 70%),radial-gradient(ellipse 40% 60% at 85% 0%,rgba(124,92,255,.22),transparent 70%),var(--surface)}
+.cta-card h2{font-size:clamp(30px,4.6vw,52px);line-height:1.12;letter-spacing:-.035em;font-weight:700}
+.cta-card p{max-width:520px;margin:22px auto 0;font-size:18px;line-height:1.6;color:var(--muted)}
+.cta-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin-top:38px}
+.cta-main{display:flex;align-items:center;gap:10px;padding:16px 32px;border-radius:999px;background:var(--btn-bg);color:var(--btn-text);font-size:16px;font-weight:600;transition:transform .15s,box-shadow .2s}
+.cta-main:hover{transform:translateY(-1px);box-shadow:0 10px 34px -8px rgba(47,107,255,.75)}
+.cta-main svg{transition:transform .2s}
+.cta-main:hover svg{transform:translateX(4px)}
+.cta-alt{padding:16px 28px;border:1px solid var(--border);border-radius:999px;font-size:16px;font-weight:500;background:var(--glass);transition:background .15s}
+.cta-alt:hover{background:var(--hover)}
+@media (max-width:720px){.cta-card{padding:56px 20px;border-radius:24px}.cta-card h2 br{display:none}}

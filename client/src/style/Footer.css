@@ -1,0 +1,13 @@
+.footer{border-top:1px solid var(--border);background:var(--surface)}
+.footer-inner{max-width:1180px;margin:0 auto;padding:64px 24px 48px;display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:40px}
+.footer .logo{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:600;letter-spacing:-.02em}
+.footer .logo b{font-weight:600;color:var(--accent)}
+.footer-brand p{margin-top:16px;max-width:260px;font-size:14px;line-height:1.6;color:var(--muted)}
+.footer h3{margin-bottom:16px;font-size:14px;font-weight:600}
+.footer ul{list-style:none;padding:0;display:grid;gap:12px}
+.footer li a{font-size:14px;color:var(--muted);transition:color .15s}
+.footer li a:hover{color:var(--text)}
+.footer-bottom{max-width:1180px;margin:0 auto;padding:22px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+.status{display:flex;align-items:center;gap:8px}
+.status i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+@media (max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;gap:36px 24px}.footer-brand{grid-column:1/-1}}
